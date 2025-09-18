@@ -399,7 +399,8 @@ portion of the data.
 For instance, we could use indexing to get only cars in the mtcars dataset with 4 gears.
 
 ```{r}
-
+mtcars[mtcars$gear == 4,]
+fourGear<- mtcars[mtcars$gear==4,]
 ```
 
 In this case, you'll notice that I put a comma after the logical statement. This is because we want all of the **rows** where the car has 4 gears.
@@ -410,6 +411,8 @@ If we wanted to get the same subset of data as above, we could do the following:
 
 ```{r}
 #five gears and 6 cyl
+fivegearsixcyl<- subset(mtcars, mtcars$gear==5 & mtcars$cyl==6)
+fivegearsixcyl
 ```
 can combine logical statements in all the ways we talked about before
 
